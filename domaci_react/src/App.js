@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 ><a href="/">Predrag's New year's bucket list</a></h1>
+        <h1>Predrag's New year's bucket list</h1>
         
       </header>
       <WishForm 
@@ -46,8 +46,7 @@ function App() {
         setWishes={setWishes}
         filteredWishes={filteredWishes}
       />
-      <footer><a >Click here for unique bucket list ideas about travel in 2022!</a></footer>
-      <Travel/> 
+      <footer><a href="/travel">Click here for unique bucket list ideas about travel in 2022!</a></footer>
       
     </div>
   );
