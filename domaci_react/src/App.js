@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import WishForm from "./components/WishForm";
 import WishList from "./components/WishList";
+import Travel from "./components/Travel";
 
 function App() {
   const [input, setInput] = useState("");
@@ -15,11 +16,11 @@ function App() {
 
   const filteredHandler = () => {
     switch (status) {
-      case 'completed':
-        setFilteredWishes(wishes.filter(wish => wish.completed === true));
+      case "completed":
+        setFilteredWishes(wishes.filter((wish) => wish.completed === true));
         break;
-      case 'uncompleted':
-        setFilteredWishes(wishes.filter(wish => wish.completed === false));
+      case "uncompleted":
+        setFilteredWishes(wishes.filter((wish) => wish.completed === false));
         break;
       default:
         setFilteredWishes(wishes);
@@ -27,11 +28,11 @@ function App() {
     }
   };
 
-
   return (
     <div className="App">
       <header>
-        <h1>Predrag's New year's bucket list</h1>
+        <h1 ><a href="/">Predrag's New year's bucket list</a></h1>
+        
       </header>
       <WishForm 
         input={input}
@@ -45,8 +46,13 @@ function App() {
         setWishes={setWishes}
         filteredWishes={filteredWishes}
       />
+      <footer><a >Click here for unique bucket list ideas about travel in 2022!</a></footer>
+      <Travel/> 
+      
     </div>
   );
 }
+
+
 
 export default App;
